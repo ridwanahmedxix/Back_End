@@ -25,15 +25,3 @@ This repository is created to practice and improve my backend development skills
 - **MongoDB / Database (later)**
 - **Git & GitHub**
 
----
-
-## 📂 Project Structure (Will Grow Over Time)
-
-```bash
-Back_End/
-│
-├── Node_Js/
-│   └── script.js
-│
-├── README.md
-└── .gitignore
