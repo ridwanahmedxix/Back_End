@@ -3,20 +3,20 @@
 // const hostNmae = "127.0.0.1";
 
 // const myServer = http.createServer((req, res) => {
-//   res.end("Hello , I am your first server");
+//   res.end("Hello , This is my First Server ");
 // });
-
 // myServer.listen(port, hostNmae, () => {
-//   console.log(`our server is runing successful at http://${hostNmae}:${port} `);
+//   console.log(`The server is running at http://${hostNmae}:${port}`);
 // });
 
 const http = require("http");
 const port = 3000;
-const hostNmae = "127.0.0.1";
+const hostName = "127.0.0.1";
 
 const myServer = http.createServer((req, res) => {
-  res.end("Hello , This is my First Server ");
+  res.end(" <h1> Hello , This is my first server </h1> ");
 });
-myServer.listen(port, hostNmae, () => {
-  console.log(`The server is running at http://${hostNmae}:${port}`);
+
+myServer.listen(port, hostName, () => {
+  console.log(`The server is running at http://${hostName}:${port}`);
 });
