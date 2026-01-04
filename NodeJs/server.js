@@ -11,12 +11,12 @@
 
 const http = require("http");
 const port = 3000;
-const hostName = "127.0.0.1";
+const hostNmae = "127.0.0.1";
 
 const myServer = http.createServer((req, res) => {
-  res.end(" <h1> Hello , This is my first server </h1> ");
+  res.end(" <h1> Hello , This is my First Server </h1> ");
 });
 
-myServer.listen(port, hostName, () => {
-  console.log(`The server is running at http://${hostName}:${port}`);
+myServer.listen(port, hostNmae, () => {
+  console.log(`The server is runing at http://${hostNmae}:${port}`);
 });
