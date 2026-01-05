@@ -14,9 +14,8 @@ const port = 3000;
 const hostName = "127.0.0.1";
 
 const myServer = http.createServer((req, res) => {
-  res.end("Hello my friends , this is my first server .");
+  res.end("Hello , bro this is my first server");
 });
-
 myServer.listen(port, hostName, () => {
   console.log(`The server is runing at http://${hostName}:${port}`);
 });
