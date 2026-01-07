@@ -2,8 +2,8 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-app.get("/contact", (req, res) => {
-  res.send("My Facebook id name - Ridwan Ahmed ");
+app.get("/hello", (req, res) => {
+  res.send("hello");
 });
 
 app.get("/", (req, res) => {
