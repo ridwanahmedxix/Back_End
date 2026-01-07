@@ -3,8 +3,7 @@ const path = require("path");
 const app = express();
 
 app.get("/contact", (req, res) => {
-  res.send("my email address - example@gmail.com");
-  res.end();
+  res.send("My Facebook id name - Ridwan Ahmed ");
 });
 
 app.get("/", (req, res) => {
