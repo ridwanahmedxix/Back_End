@@ -1,13 +1,13 @@
 const express = require("express");
-const UserRouter = require("./routes/users_route");
 const path = require("path");
+const UserRouter = require("./routes/users_route");
 const app = express();
 
 app.use("/api/user", UserRouter);
 
 app.use("/", (req, res) => {
-  res.send("This is a Home Page");
-  res.end();
+  res.statusCode = 200;
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.use((req, res) => {
