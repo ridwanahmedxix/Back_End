@@ -2,10 +2,9 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-app.get("/hello", (req, res) => {
-  res.send("hello");
+app.get("/contact", (req, res) => {
+  res.end("This is my contsct section");
 });
-
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });

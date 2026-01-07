@@ -2,5 +2,5 @@ const app = require("./app");
 const port = 3000;
 
 app.listen(port, () => {
-  console.log(`The server is runing at http://localhost:${port}`);
+  console.log(`The Server Is Runing At http://localhost:${port}`);
 });
