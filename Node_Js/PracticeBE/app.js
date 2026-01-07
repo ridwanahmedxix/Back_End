@@ -1,14 +1,14 @@
 const express = require("express");
-const userRoutes = require("./routes/userRoutes");
+const userRouter = require("./routes/userRoutes");
 const app = express();
 
-app.use("/api/user", userRoutes);
-
+app.use("/api/user", userRouter);
 app.use("/", (req, res) => {
-  res.send("This is Home Page");
+  res.send("This is a Home Page");
 });
+
 app.use((req, res) => {
-  res.send(" <h1> 404 || Page Not Found </h1>  ");
+  res.send("404 || Error - Page Not Found");
 });
 
 module.exports = app;
