@@ -1,12 +1,17 @@
 const express = require("express");
+const UserRouter = require("./routes/users_route");
 const path = require("path");
 const app = express();
 
-app.get("/contact", (req, res) => {
-  res.end("This is my contsct section");
+app.use("/api/user", UserRouter);
+
+app.use("/", (req, res) => {
+  res.send("This is a Home Page");
+  res.end();
 });
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+
+app.use((req, res) => {
+  res.send(" <h1> 404 !! Page Not Found </h1> ");
 });
 
 module.exports = app;
