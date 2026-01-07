@@ -1,3 +1,5 @@
+
+APP.JS FILE 
 const express = require("express");
 const app = express();
 
@@ -14,3 +16,19 @@ app.get("/ridwan", (req, res) => {
 });
 
 module.exports = app;
+
+
+
+SCRIPT.JS FILE ------
+
+const app = require("./app");
+const port = 3000;
+
+app.listen(port, () => {
+  console.log(`The server is runing at http://localhost:${port}`);
+});
+
+
+
+
+--------------------------------------------------------
