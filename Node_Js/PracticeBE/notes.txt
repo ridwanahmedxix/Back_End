@@ -33,3 +33,48 @@ const myServer = http.createServer((req, res) => {
 myServer.listen(port, hostName, () => {
   console.log(`The Server Is Runing At http://${hostName}:${port}`);
 });
+
+---------------------------------------------------
+SCRIPT.JS - 
+const app = require("./app");
+const port = 3000;
+
+app.listen(port, () => {
+  console.log(`The Server is runing at http://localhost:${port}`);
+});
+
+
+APP.JS--
+const express = require("express");
+const userRoutes = require("./routes/userRoutes");
+const app = express();
+
+app.use("/api/user/", userRoutes);
+
+app.use("/", (req, res) => {
+  res.send("This is a Home Page");
+  res.end();
+});
+app.use((req, res) => {
+  res.send("404 || Page Not Found");
+});
+module.exports = app;
+
+
+USERROUTES.JS - 
+const express = require("express");
+const router = express.Router();
+
+router.use("/about", (req, res) => {
+  res.send("This is a About Page");
+  res.end();
+});
+
+router.use("/contact", (req, res) => {
+  res.send("This is a Contact Page");
+});
+
+module.exports = router;
+
+
+-------------------------------------------------------
