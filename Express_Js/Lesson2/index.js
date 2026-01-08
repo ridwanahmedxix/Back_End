@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
-const port = 3002;
+const port = 3004;
 
 app.get("/", (req, res) => {
   const { id, name } = req.query;
-  res.send(`<h1> Student Name Is : ${name} , And Id Is : ${id} </h1> `);
+  res.send(`Student Name Is : ${name} , And Id Is : ${id}`);
 });
 
 app.listen(port, () => {
-  console.log(`Server is runing at http://localhost:${port}`);
+  console.log(`The Server is runing at http://localhost:${port}`);
 });
