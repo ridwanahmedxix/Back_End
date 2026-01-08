@@ -1,0 +1,22 @@
+Request receved id this way ----
+
+const express = require("express");
+const app = express();
+const port = 3003;
+
+app.get("/", (req, res) => {
+  const id = req.query.id;
+  res.send(`Studend id is : ${id}`);
+});
+
+app.listen(port, () => {
+  console.log(`The server is runing at http://localhost:${port}`);
+});
+
+
+
+
+
+
+
+--------------------------------------------------------
