@@ -3,7 +3,8 @@ const userRoutes = require("./routes/userRoutes");
 const app = express();
 
 app.use("/api/user", userRoutes);
-app.use("/", (req, res) => {
+
+app.get("/", (req, res) => {
   res.send("This is a Home Page");
 });
 
