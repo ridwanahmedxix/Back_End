@@ -94,3 +94,17 @@ app.listen(port, () => {
 
 -------------------------------------------------------------
 
+const express = require("express");
+const app = express();
+const port = 3004;
+// ST 1 PART
+
+;
+
+// 3 RD PART
+app.listen(port, () => {
+  console.log(`The Server is runing at http://localhost:${port}`);
+});
+
+
+-----------------------------------------------------------------------
