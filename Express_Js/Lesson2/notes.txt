@@ -108,3 +108,26 @@ app.listen(port, () => {
 
 
 -----------------------------------------------------------------------
+
+express js bangla tutorial 8 : how to make post request with josn or from data --
+
+1. npm i body-parser .
+2 . app.use(bodyParser.json());
+3. Postman use to run 
+
+=========
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
+const port = 3000;
+
+app.use(bodyParser.json());
+
+app.post("/user", (req, res) => {
+  const name = req.body.name;
+  res.send(` Welcome ${name}`);
+});
+
+app.listen(port, () => {
+  console.log(`The server is runing at http://localhost:${port}`);
+});
