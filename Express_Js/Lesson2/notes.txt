@@ -2,21 +2,49 @@ Request receved id this way ----
 
 const express = require("express");
 const app = express();
-const port = 3003;
+const port = 3002;
 
 app.get("/", (req, res) => {
   const id = req.query.id;
-  res.send(`Studend id is : ${id}`);
+  res.send(`<h1> Student Id Is : ${id} </h1> `);
 });
 
 app.listen(port, () => {
-  console.log(`The server is runing at http://localhost:${port}`);
+  console.log(`Server is runing at http://localhost:${port}`);
 });
 
 
-
-
-
-
-
 --------------------------------------------------------
+
+NAme ane Id ---
+
+const express = require("express");
+const app = express();
+const port = 3002;
+
+app.get("/", (req, res) => {
+  const id = req.query.id;
+  const name = req.query.name;
+  res.send(`<h1> Student Name Is : ${name} , And Id Is : ${id} </h1> `);
+});
+
+app.listen(port, () => {
+  console.log(`Server is runing at http://localhost:${port}`);
+});
+
+
+-------------------------------------------------
+
+const id = req.query.id;
+  const name = req.query.name;
+
+  alternative----------
+
+
+   const { id, name } = req.query;
+
+
+-----------------------------------------
+
+
+

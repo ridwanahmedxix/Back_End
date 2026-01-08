@@ -3,8 +3,8 @@ const app = express();
 const port = 3002;
 
 app.get("/", (req, res) => {
-  const id = req.query.id;
-  res.send(`Student Id Is : ${id}`);
+  const { id, name } = req.query;
+  res.send(`<h1> Student Name Is : ${name} , And Id Is : ${id} </h1> `);
 });
 
 app.listen(port, () => {
