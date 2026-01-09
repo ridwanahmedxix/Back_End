@@ -4,11 +4,17 @@ const app = express();
 const port = 3003;
 const hostName = "127.0.0.1";
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.post("/user", (req, res) => {
-  const { name, id, age } = req.body;
-  res.send(`The name : ${name} and the id ${id} and the age ${age} `);
+app.get("/registar", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
+
+app.post("/registar", (req, res) => {
+  const fullName = req.body.fullName;
+  const age = req.body.age;
+  res.send(`Welcome ${fullName} and your Age: ${age} `);
 });
 
 app.listen(port, hostName, () => {
