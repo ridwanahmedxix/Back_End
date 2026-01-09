@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CIRCLE PAGE</title>
+    <title>TRIANGLE PAGE</title>
   </head>
   <body>
     <header>
@@ -15,13 +15,19 @@
       </nav>
     </header>
     <main>
-      <h1>Circle Page</h1>
+      <h1>Triangle Page</h1>
 
-      <form action="/circle" method="post">
+      <form action="/triangle" method="post">
         <div>
-          <label for="radius"> Radius : </label>
-          <input id="radius" name="radius" type="text" />
+          <label for="base"> Base : </label>
+          <input id="base" name="base" type="text" />
         </div>
+
+        <div>
+          <label for="height"> Height : </label>
+          <input id="height" name="height" type="text" />
+        </div>
+
         <button type="submit">Calculate</button>
       </form>
     </main>
