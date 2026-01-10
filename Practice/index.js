@@ -12,9 +12,20 @@ app.get("/", (req, res) => {
 app.get("/circle", (req, res) => {
   res.sendFile(__dirname + "/circle.html");
 });
+app.post("/circle", (req, res) => {
+  const radius = req.body.radius;
+  const Area = Math.PI * radius;
+  res.send(` <h2> The Area Of Circle : ${Area}  </h2> `);
+});
 
 app.get("/triangle", (req, res) => {
   res.sendFile(__dirname + "/triangle.html");
+});
+app.post("/triangle", (req, res) => {
+  const base = req.body.base;
+  const height = req.body.height;
+  const Area = 0.5 * base * height;
+  res.send(` <h2> The Area Of Triangle : ${Area}  </h2> `);
 });
 
 app.listen(port, () => {
