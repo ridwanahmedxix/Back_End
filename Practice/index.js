@@ -16,12 +16,18 @@ app.get("/circle", (req, res) => {
 
 app.post("/circle", (req, res) => {
   const radius = req.body.radius;
-  const Area = Math.PI * radius;
-  res.send(` <h2>  The Area Of Circle : ${Area}  </h2> `);
+  const area = Math.PI * radius;
+  res.send(` <h2>  The Area Of Circle : ${area}  </h2> `);
 });
 
 app.get("/triangle", (req, res) => {
   res.sendFile(__dirname + "/triangle.html");
+});
+app.post("/triangle", (req, res) => {
+  const base = req.body.base;
+  const height = req.body.height;
+  const area = 0.5 * base * height;
+  res.send(` <h2> The Area Of Triangle : ${area} </h2> `);
 });
 
 app.listen(port, () => {
