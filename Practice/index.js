@@ -14,7 +14,11 @@ app.get("/circle", (req, res) => {
   res.sendFile(__dirname + "/circle.html");
 });
 
-app.post("/circle", (req, res) => {});
+app.post("/circle", (req, res) => {
+  const radius = req.body.radius;
+  const Area = Math.PI * radius;
+  res.send(` <h2>  The Area Of Circle : ${Area}  </h2> `);
+});
 
 app.get("/triangle", (req, res) => {
   res.sendFile(__dirname + "/triangle.html");
