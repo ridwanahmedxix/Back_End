@@ -9,9 +9,13 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
+
 app.get("/circle", (req, res) => {
   res.sendFile(__dirname + "/circle.html");
 });
+
+app.post("/circle", (req, res) => {});
+
 app.get("/triangle", (req, res) => {
   res.sendFile(__dirname + "/triangle.html");
 });
