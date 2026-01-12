@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3005;
-
+app.use(express.urlencoded({ extended: true }));
 const htmlForm = ` 
     <form action="/user" method="post" >
       <input type="text" name="name" placeholder="Enter Name" />
@@ -12,6 +12,11 @@ const htmlForm = `
 
 app.get("/user", (req, res) => {
   res.send(htmlForm);
+});
+app.post("/user", (req, res) => {
+  const name = req.body.name;
+  const age = req.body.age;
+  res.send(`Your Name Is : ${name} and Your Age : ${age}`);
 });
 
 app.use((req, res, next) => {
