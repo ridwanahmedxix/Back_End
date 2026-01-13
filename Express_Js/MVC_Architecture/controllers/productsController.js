@@ -3,7 +3,7 @@ const path = require("path");
 const products = require("../models/productsModel");
 
 exports.getProducts = (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "views", "index.html"));
+  res.sendFile(path.join(__dirname, "..", "views", "product.html"));
 };
 
 exports.saveProducts = (req, res) => {
