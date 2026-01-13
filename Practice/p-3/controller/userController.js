@@ -3,7 +3,7 @@ const path = require("path");
 const users = require("../model/userModel");
 
 exports.getUsers = (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "views", "index.html"));
+  res.sendFile(path.join(__dirname, "..", "view", "index.html"));
 };
 
 exports.saveUser = (req, res) => {
