@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 app.post("/home", (req, res) => {
   const name = req.body.name;
   const password = req.body.password;
-  // console.log(`Your Name Is : ${name} And Your Password : ${password} `);
+  console.log(`Your Name Is : ${name} And Your Password : ${password} `);
   res.sendFile(path.join(__dirname + "/views/home.html"));
 });
 
