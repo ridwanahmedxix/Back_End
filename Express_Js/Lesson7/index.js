@@ -2,8 +2,11 @@ const express = require("express");
 const app = express();
 const PORT = 5500;
 
-app.get("/", (req, res) => {
-  res.send("Welcome To Our Company");
+app.get("/registar", (req, res) => {
+  res.status(200).sendFile(__dirname + "/index.html");
+});
+app.get("/test", (req, res) => {
+  res.status(200).send(" This a Test Api ");
 });
 
 app.listen(PORT, () => {
