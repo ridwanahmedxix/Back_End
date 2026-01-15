@@ -1,0 +1,8 @@
+const express = require("express");
+const multer = require("multer");
+const app = express();
+const PORT = 6000;
+
+app.listen(PORT, () => {
+  console.log(`THE SERVER IS RUNING AT http://localhost:${PORT}`);
+});
