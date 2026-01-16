@@ -3,10 +3,24 @@ const multer = require("multer");
 const app = express();
 const PORT = 4000;
 
+//Multer Image Upload Code -
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads");
+  },
+  filename: function (req, file, cb) {
+    const name = Date.now() + "-" + file.originalname;
+    cb(null, name);
+  },
+});
+
+const upload = multer({ storage: storage });
+
 app.get("/registar", (req, res) => {
   res.status(200).sendFile(__dirname + "/index.html");
 });
-app.post("/registar", (req, res) => {
+app.post("/registar", upload.single("image"), (req, res) => {
   res.status(200).send("Image Is Uploaded");
 });
 
