@@ -3,6 +3,13 @@ const multer = require("multer");
 const app = express();
 const PORT = 4000;
 
+app.get("/registar", (req, res) => {
+  res.status(200).sendFile(__dirname + "/index.html");
+});
+app.post("/registar", (req, res) => {
+  res.status(200).send("Image Is Uploaded");
+});
+
 app.get("/home", (req, res) => {
   res.status(200).send("Welcome To Home Page");
 });
