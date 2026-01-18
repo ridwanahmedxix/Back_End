@@ -3,9 +3,23 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = 2500;
 
-app.get("/", (req, res) => {
-  res.send(" <h1> Welcome To The Home Page </h1> ");
+// Create Product Schema
+const productsSchema = new mongoose.Schema({
+  // title: {
+  //   type: String,
+  //   // required: true,
+  // },
+  title: String,
+  price: Number,
+  description: String,
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
+// Create Product Model
+
+const product = mongoose.model("Products", productsSchema);
 
 // DB Connections
 
@@ -19,6 +33,11 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
+
+// Home Route
+app.get("/", (req, res) => {
+  res.send(" <h1> Welcome To The Home Page </h1> ");
+});
 
 app.listen(PORT, async () => {
   console.log(`The Server Is Runing At http://localhost:${PORT}`);
