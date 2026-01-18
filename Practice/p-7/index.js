@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = 2500;
 
-// Create Product Schema
+// Create Products Schema
 
 const productsSchema = new mongoose.Schema({
   title: String,
@@ -15,18 +15,16 @@ const productsSchema = new mongoose.Schema({
   },
 });
 
-// Create Product Model
-
-const product = mongoose.model("products", productsSchema);
+// Create Products Model
 
 // DB CONNECTIONS
 
-const connectionsDB = async () => {
+const connectionDB = async () => {
   try {
     await mongoose.connect("mongodb://127.0.0.1:27017/testDB");
-    console.log("DB SERVER IS CONNECTED");
+    console.log(" DB IS CONNECTED");
   } catch (error) {
-    console.log("DB SERVER IS NOT CONNECTED");
+    console.log(" DB IS NOT CONNECTED");
     console.log(error);
     process.exit(1);
   }
@@ -37,6 +35,6 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, async () => {
-  console.log(`THE SERVER IS RUNING AT http://localhost:${PORT}`);
-  await connectionsDB();
+  console.log(`THE SERVER IS AT http:localhost:${PORT} `);
+  await connectionDB();
 });
