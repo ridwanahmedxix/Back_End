@@ -1,26 +1,26 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const PORT = 3500;
+const PORT = 2500;
 
 // DB CONNECTIONS
 
-const connecDB = async () => {
+const connectionsDB = async () => {
   try {
     await mongoose.connect("mongodb://127.0.0.1:27017/testDB");
-    console.log("DB ID CONNECTED");
+    console.log("DB SERVER IS CONNECTED");
   } catch (error) {
-    console.log("DB ID NOT CONNECTED");
+    console.log("DB SERVER IS NOT CONNECTED");
     console.log(error);
     process.exit(1);
   }
 };
 
 app.get("/", (req, res) => {
-  res.send("  welcome to the home page ");
+  res.send("WELCOME TO THE HOME PAGE ");
 });
 
 app.listen(PORT, async () => {
-  console.log(`The Server Is Runing At http://localhost:${PORT}`);
-  await connecDB();
+  console.log(`THE SERVER IS RUNING AT http://localhost:${PORT}`);
+  await connectionsDB();
 });
