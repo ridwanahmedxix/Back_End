@@ -31,9 +31,9 @@ const connectDB = async () => {
   }
 };
 
-// app.get("/", (req, res) => {
-//   res.status(200).sendFile(__dirname + "/index.html");
-// });
+app.get("/", (req, res) => {
+  res.status(200).sendFile(__dirname + "/index.html");
+});
 
 app.listen(PORT, () => {
   console.log(`THE SERVER IS RUNING AT http://localhost:${PORT}`);
