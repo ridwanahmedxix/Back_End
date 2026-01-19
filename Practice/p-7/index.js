@@ -3,6 +3,21 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = 3800;
 
+// Create Products Schema
+
+const productsSchema = new mongoose.Schema({
+  title: String,
+  price: Number,
+  description: String,
+  createAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+// Create Products Model
+const product = mongoose.model("products", productsSchema);
+
 // DB CONNECTIONS
 
 const connectDB = async () => {
