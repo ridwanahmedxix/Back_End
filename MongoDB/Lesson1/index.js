@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = 2500;
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Create Product Schema
 const productsSchema = new mongoose.Schema({
@@ -38,6 +40,27 @@ const connectDB = async () => {
 app.get("/", (req, res) => {
   res.send(" <h1> Welcome To The Home Page </h1> ");
 });
+// Products Post Route
+app.post("/products", async (req, res) => {
+  try {
+    // get data from request body
+    const { title, price, description } = req.body;
+
+    const newProduct = new product({
+      title: title,
+      price: price,
+      description: description,
+    });
+
+    const productData = await newProduct.save();
+
+    res.status(201).send(productData);
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
+
+// Server PORT
 
 app.listen(PORT, async () => {
   console.log(`The Server Is Runing At http://localhost:${PORT}`);
