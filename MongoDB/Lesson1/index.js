@@ -7,13 +7,21 @@ app.use(express.urlencoded({ extended: true }));
 
 // Create Product Schema
 const productsSchema = new mongoose.Schema({
-  // title: {
-  //   type: String,
-  //   // required: true,
-  // },
-  title: String,
-  price: Number,
-  description: String,
+  title: {
+    type: String,
+    required: true,
+  },
+
+  price: {
+    type: Number,
+    required: true,
+  },
+
+  description: {
+    type: String,
+    required: true,
+  },
+
   createdAt: {
     type: Date,
     default: Date.now,
