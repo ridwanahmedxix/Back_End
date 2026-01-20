@@ -20,6 +20,8 @@ const productsSchema = new mongoose.Schema({
 
 // Create Products Model
 
+const product = mongoose.model("Products", productsSchema);
+
 // DB CONNECTIONS
 
 const connectDB = async () => {
