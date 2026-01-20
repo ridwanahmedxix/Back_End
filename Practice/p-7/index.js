@@ -3,6 +3,9 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = 2900;
 
+// Create Products Schema
+// Create Products Model
+
 // DB CONNECTIONS
 
 const connectDB = async () => {
