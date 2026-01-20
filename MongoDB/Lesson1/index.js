@@ -68,6 +68,17 @@ app.post("/products", async (req, res) => {
   }
 });
 
+// One Route Create
+
+const loadRegistar = async (req, res) => {
+  try {
+  } catch (error) {
+    res.status(500).send({
+      message: error.message,
+    });
+  }
+};
+
 // Server PORT
 
 app.listen(PORT, async () => {
