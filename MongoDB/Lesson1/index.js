@@ -68,6 +68,14 @@ app.post("/products", async (req, res) => {
   }
 });
 
+// Products Get Request
+
+app.get("/products", async (req, res) => {
+  try {
+    const products = await product.find();
+  } catch (error) {}
+});
+
 // Server PORT
 
 app.listen(PORT, async () => {
