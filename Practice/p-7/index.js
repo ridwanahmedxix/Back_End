@@ -4,6 +4,20 @@ const app = express();
 const PORT = 2900;
 
 // Create Products Schema
+
+const productsSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  price: Number ,
+  description: String ,
+  createAt: {
+    type: Date ,
+    default:
+  }
+});
+
 // Create Products Model
 
 // DB CONNECTIONS
