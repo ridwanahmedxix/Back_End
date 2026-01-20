@@ -10,12 +10,12 @@ const productsSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  price: Number ,
-  description: String ,
+  price: Number,
+  description: String,
   createAt: {
-    type: Date ,
-    default:
-  }
+    type: Date,
+    default: Date.now,
+  },
 });
 
 // Create Products Model
