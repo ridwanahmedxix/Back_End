@@ -94,16 +94,19 @@ app.listen(PORT, async () => {
 
 //  Id To Search Products
 
-app.get("/products", async (req, res) => {
+app.get("/products/:id", async (req, res) => {
   try {
-    const products = await product.find();
-    if (products) {
-      res.status(200).send(products);
-    } else {
-      res.status(404).send({
-        message: "Products Not Found",
-      });
-    }
+    const id = req.params.id;
+    const product = await product.find({ _id: id });
+    res.send(product);
+
+    // if (products) {
+    //   res.status(200).send(products);
+    // } else {
+    //   res.status(404).send({
+    //     message: "Products Not Found",
+    //   });
+    // }
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
