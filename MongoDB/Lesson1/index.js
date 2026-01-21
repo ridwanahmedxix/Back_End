@@ -91,3 +91,20 @@ app.listen(PORT, async () => {
   console.log(`The Server Is Runing At http://localhost:${PORT}`);
   await connectDB();
 });
+
+//  Id To Search Products
+
+app.get("/products", async (req, res) => {
+  try {
+    const products = await product.find();
+    if (products) {
+      res.status(200).send(products);
+    } else {
+      res.status(404).send({
+        message: "Products Not Found",
+      });
+    }
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
