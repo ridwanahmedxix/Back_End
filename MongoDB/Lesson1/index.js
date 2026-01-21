@@ -97,7 +97,7 @@ app.listen(PORT, async () => {
 app.get("/products/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const product = await product.find({ _id: id });
+    const product = await product.findOne({ _id: id });
     res.send(product);
 
     // if (products) {
