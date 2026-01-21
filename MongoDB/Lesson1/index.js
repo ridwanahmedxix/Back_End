@@ -74,7 +74,11 @@ app.get("/products", async (req, res) => {
   try {
     const products = await product.find();
     if (product) {
-      res.status(200).send(products);
+      res.status(200).send({
+        message: "Products Not Found",
+      });
+    } else {
+      res.status(404).send(products);
     }
   } catch (error) {
     res.status(500).send({ message: error.message });
