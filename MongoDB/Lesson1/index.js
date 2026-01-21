@@ -74,7 +74,7 @@ app.get("/products", async (req, res) => {
   try {
     const products = await product.find();
     if (product) {
-      res.status(200).send(product);
+      res.status(200).send(products);
     }
   } catch (error) {
     res.status(500).send({ message: error.message });
