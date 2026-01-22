@@ -22,6 +22,13 @@ app.post("/registar", (req, res) => {
     message: "This is a Registar Route",
   });
 });
+// Login Route
+
+app.post("/login", (req, res) => {
+  res.status(200).json({
+    message: "User is Login",
+  });
+});
 
 // Route not found
 
