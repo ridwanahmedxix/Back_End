@@ -3,6 +3,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const PORT = process.env.PORT || 2900;
+const dbURL = process.env.MONGO_ATLAS_URL;
+mongoose.connect(dbURL).then(() => {
+  console.log("MongoDB Atlas Is Connected");
+});
 const app = express();
 
 app.use(cors());
