@@ -18,8 +18,11 @@ app.get("/", (req, res) => {
 // Registar Route
 
 app.post("/registar", (req, res) => {
+  const { email, password } = req.body;
+
   res.status(201).json({
-    message: "This is a Registar Route",
+    email,
+    password,
   });
 });
 // Login Route
