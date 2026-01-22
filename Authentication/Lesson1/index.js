@@ -18,7 +18,9 @@ app.get("/", (req, res) => {
 // Registar Route
 
 app.post("/registar", (req, res) => {
-  res.send;
+  res.status(201).json({
+    message: "This is a Registar Route",
+  });
 });
 
 // Route not found
