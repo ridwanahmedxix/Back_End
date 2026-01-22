@@ -24,7 +24,11 @@ app.use((req, res, next) => {
 });
 
 // Server Error
-app.use((err, req, res, next));
+app.use((err, req, res, next) => {
+  res.status(500).json({
+    message: "Something Broke",
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`THE SERVER IS RUNING AT http://localhost:${PORT}`);
