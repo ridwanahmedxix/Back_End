@@ -15,6 +15,12 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/./views/index.html");
 });
 
+// Registar Route
+
+app.post("/registar", (req, res) => {
+  res.send;
+});
+
 // Route not found
 
 app.use((req, res, next) => {
