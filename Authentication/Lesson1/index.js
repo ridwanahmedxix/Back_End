@@ -15,6 +15,14 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/./views/index.html");
 });
 
+// Route not found
+
+app.use((req, res, next) => {
+  res.status(404).json({
+    message: "Route Not Found",
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`THE SERVER IS RUNING AT http://localhost:${PORT}`);
 });
