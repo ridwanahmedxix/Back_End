@@ -23,6 +23,9 @@ app.use((req, res, next) => {
   });
 });
 
+// Server Error
+app.use((err, req, res, next));
+
 app.listen(PORT, () => {
   console.log(`THE SERVER IS RUNING AT http://localhost:${PORT}`);
 });
