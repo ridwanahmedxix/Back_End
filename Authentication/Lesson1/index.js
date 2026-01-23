@@ -39,10 +39,18 @@ app.post("/registar", async (req, res) => {
 });
 // Login Route
 
-app.post("/login", (req, res) => {
-  res.status(200).json({
-    message: "User is Login",
-  });
+app.post("/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email: email });
+    if (user && user.password === password) {
+      res.status(200).json({ status: "Valid user" });
+    } else {
+      console.log("User not Found Login ");
+    }
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
 });
 
 // Route not found
