@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const User = require("./models/user.model");
 const PORT = process.env.PORT || 2900;
 const dbURL = process.env.MONGO_ATLAS_URL;
 mongoose
@@ -28,12 +29,9 @@ app.get("/", (req, res) => {
 // Registar Route
 
 app.post("/registar", (req, res) => {
-  const { email, password } = req.body;
-
-  res.status(201).json({
-    email,
-    password,
-  });
+  try {
+    const newUser = new User(req.body);
+  } catch (error) {}
 });
 // Login Route
 
