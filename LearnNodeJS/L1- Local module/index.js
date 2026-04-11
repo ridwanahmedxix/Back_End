@@ -1,5 +1,16 @@
-const s1 = require("./students");
+// node js bangla tutorial 3 : Module | Local module - exports, require
 
-console.log(s1.getName());
-console.log(s1.getAge());
-console.log(s1.getEmail());
+// ------- START ----------
+
+// const studentOne = require("./students");
+
+// console.log(studentOne.getName());
+// console.log(studentOne.getAge());
+// console.log(studentOne.getEmail());
+// console.log(studentOne.cgpa);
+
+// --------Method 2 - Jei jei function dorkar sudu seta use korte parbo ------------
+
+const { getName, cgpa } = require("./students");
+console.log(getName());
+console.log(cgpa);
