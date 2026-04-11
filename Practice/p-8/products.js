@@ -11,3 +11,10 @@ const getUser = () => {
 const getLocation = () => {
   return "Rangpure,Bangladesh";
 };
+
+module.exports = {
+  getName,
+  getPrice,
+  getUser,
+  getLocation,
+};
