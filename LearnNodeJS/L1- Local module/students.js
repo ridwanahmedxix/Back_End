@@ -9,3 +9,7 @@ const getAge = () => {
 const getEmail = () => {
   return "ridwan@gmail.com";
 };
+
+exports.getName = getName;
+exports.getAge = getAge;
+exports.getEmail = getEmail;
