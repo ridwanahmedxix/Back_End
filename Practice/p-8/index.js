@@ -1,6 +1,9 @@
-const productOne = require("./products");
+const fs = require("fs");
 
-console.log(productOne.getName());
-console.log(productOne.getPrice);
-console.log(productOne.getUser());
-console.log(productOne.getLocation());
+fs.unlink("Data.txt", (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Successful");
+  }
+});
