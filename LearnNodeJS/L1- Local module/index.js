@@ -1,16 +1,16 @@
-// node js bangla tutorial 3 : Module | Local module - exports, require
+// * node js bangla tutorial 3 : Module | Local module - exports, require
 
 // ------- START ----------
 
-// const studentOne = require("./students");
+const studentOne = require("./students");
 
-// console.log(studentOne.getName());
-// console.log(studentOne.getAge());
-// console.log(studentOne.getEmail());
-// console.log(studentOne.cgpa);
+console.log(studentOne.getName());
+console.log(studentOne.getAge());
+console.log(studentOne.getEmail());
+console.log(studentOne.cgpa);
 
-// --------Method 2 - Jei jei function dorkar sudu seta use korte parbo ------------
+// * --------Method 2  Jei jei function dorkar sudu seta use korte parbo ------------
 
-const { getName, cgpa } = require("./students");
-console.log(getName());
-console.log(cgpa);
+//  const { getName, cgpa } = require("./students");
+// console.log(getName());
+// console.log(cgpa);
