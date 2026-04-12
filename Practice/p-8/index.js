@@ -1,6 +1,9 @@
-const studentOne = require("./products");
+const fs = require("fs");
 
-console.log(studentOne.getName());
-console.log(studentOne.getAge);
-console.log(studentOne.getEmail());
-console.log(studentOne.getAddress());
+fs.appendFile("Demo1.txt", " . Hello! my name is Ridwan Ahmed", (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Successful");
+  }
+});
