@@ -1,6 +1,5 @@
 const fs = require("fs");
-
-fs.appendFile("Demo1.txt", " . Hello! my name is Ridwan Ahmed", (err) => {
+fs.unlink("Demo2.txt", (err) => {
   if (err) {
     console.log(err);
   } else {
