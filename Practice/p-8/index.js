@@ -1,11 +1,11 @@
-const http = require("http");
-const PORT = 3100;
-const localHost = "127.0.0.1";
+// const http = require("http");
+// const PORT = 3100;
+// const localHost = "127.0.0.1";
 
-const myServer = http.createServer((req, res) => {
-  res.end(" <h1>  Hello World </h1>  ");
-});
+// const myServer = http.createServer((req, res) => {
+//   res.end(" <h1>  Hello World </h1>  ");
+// });
 
-myServer.listen(PORT, localHost, () => {
-  console.log(`The server is runing at http://${localHost}:${PORT} `);
-});
+// myServer.listen(PORT, localHost, () => {
+//   console.log(`The server is runing at http://${localHost}:${PORT} `);
+// });
