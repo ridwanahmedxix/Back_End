@@ -8,3 +8,9 @@ const getAge = () => {
 const getEmail = () => {
   return "ridwan@gmail.com";
 };
+
+module.exports = {
+  getName,
+  getAge,
+  getEmail,
+};

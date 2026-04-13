@@ -1,9 +1,11 @@
+const student = require("./index");
+
 const http = require("http");
 const PORT = 2900;
 const localHost = "127.0.0.1";
 
 const myServer = http.createServer((req, res) => {
-  res.writeHead(202, { "Content-Type": "text/htl" });
+  res.writeHead(202, { "Content-Type": "text/html" });
   if (req.url === "/") {
     res.end(`   
     <h1>Welcome To My Server</h1>
@@ -12,6 +14,12 @@ const myServer = http.createServer((req, res) => {
     <a href="/age"> Age </a>
     <a href="/email"> Email </a> 
     `);
+  } else if (req.url === "/name") {
+    res.end(`
+        <h1> Name : ${student.getName()}
+        <br/>
+         <a href="/">Go Back</a>
+        `);
   }
 });
 
