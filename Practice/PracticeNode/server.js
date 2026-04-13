@@ -8,10 +8,33 @@ const myServer = http.createServer((req, res) => {
   if (req.url === "/") {
     res.end(`
    <h1>Welcom to my server</h1>
-    <a href="/home"> Home </a>
+    <br />
+    <a href="/name"> Name  </a>
+     <br />
     <a href="/age"> Age </a>
+     <br />
     <a href="/email"> Email </a>
      `);
+  } else if (req.url === "/name") {
+    res.end(`
+    <h1>Name : ${student.getName()}  </h1>
+    <br />
+    <a href="/"> Go Back </a>
+      `);
+  } else if (req.url === "/age") {
+    res.end(`
+    <h1>Name : ${student.getAge()}  </h1>
+    <br />
+    <a href="/"> Go Back </a>
+      `);
+  } else if (req.url === "/email") {
+    res.end(`
+    <h1>Name : ${student.getEmail()}  </h1>
+    <br />
+    <a href="/"> Go Back </a>
+      `);
+  } else {
+    res.end(` <h1> 404 ! Page Not Found  </h1> `);
   }
 });
 
