@@ -3,7 +3,11 @@ const PORT = 2900;
 const localHost = "127.0.0.1";
 
 const myServer = http.createServer((req, res) => {
-  res.end("Hello world");
+  if (req.url === "/") {
+    res.end("Welcome to my server");
+  } else if (req.url === "/name") {
+    req.end(student);
+  }
 });
 
 myServer.listen(PORT, localHost, () => {
