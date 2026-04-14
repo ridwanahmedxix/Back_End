@@ -1,17 +1,11 @@
-// const getName = () => {
-//   return "Ridwan Ahmed ";
-// };
+const getName = () => {
+  return " Ridwan Ahmed ";
+};
 
-// const getAge = () => {
-//   return " My Age 19 ";
-// };
+const getLocation = () => {
+  return " Rangpure , Bangladesh ";
+};
 
-// const getEmail = () => {
-//   return " ridwan@gmail.com ";
-// };
-
-// module.exports = {
-//   getName,
-//   getAge,
-//   getEmail,
-// };
+const getEmail = () => {
+  return "ridwan@gmail.com";
+};
