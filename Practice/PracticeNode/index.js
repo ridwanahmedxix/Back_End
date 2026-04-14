@@ -9,3 +9,9 @@ const getLocation = () => {
 const getEmail = () => {
   return "ridwan@gmail.com";
 };
+
+module.exports = {
+  getName,
+  getLocation,
+  getEmail,
+};
