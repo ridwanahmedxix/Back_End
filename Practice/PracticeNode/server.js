@@ -26,6 +26,27 @@ const myServer = http.createServer((req, res) => {
     </ul>
       `);
     res.end();
+  } else if (req.url === "/name") {
+    res.write(`
+     <h1>Name : ${student.getName()} </h1>
+    <br />
+    <a href="/"> Go Back </a>
+      `);
+    res.end();
+  } else if (req.url === "/age") {
+    res.write(`
+     <h1>Name : ${student.getAge()} </h1>
+    <br />
+    <a href="/"> Go Back </a>
+      `);
+    res.end();
+  } else if (req.url === "/email") {
+    res.write(`
+     <h1>Name : ${student.getEmail()} </h1>
+    <br />
+    <a href="/"> Go Back </a>
+      `);
+    res.end();
   }
 });
 
