@@ -4,7 +4,7 @@ const PORT = 3200;
 const localHost = "127.0.0.1";
 
 const myServer = http.createServer((req, res) => {
-  res.end("Hello World");
+  res.end("Hello World ");
 });
 
 myServer.listen(PORT, localHost, () => {
