@@ -4,7 +4,9 @@ const PORT = 3300;
 const localHost = "127.0.0.1";
 
 const myServer = http.createServer((req, res) => {
-  res.end("Hello World");
+  if (req.url === "/") {
+    res.writeHead(202, { "Content-Type": "text/html" });
+  }
 });
 
 myServer.listen(PORT, localHost, () => {
