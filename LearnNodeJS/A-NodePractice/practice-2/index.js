@@ -16,7 +16,9 @@ const handleReadFile = (fileName, statusCode, req, res) => {
 };
 
 const myServer = http.createServer((req, res) => {
-  res.end("Helllo World");
+  if (req.url === "/") {
+    handleReadFile("./views/index.html", 200, req, res);
+  }
 });
 
 myServer.listen(PORT, localHost, () => {
