@@ -6,4 +6,4 @@ app.listen(PORT, () => {
   console.log(` THE SERVER IS RUNING AT http://localhost:${PORT}`);
 });
 
-// console.log("Hello World");
+console.log("Hello World");
