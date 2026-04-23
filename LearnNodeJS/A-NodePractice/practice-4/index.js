@@ -1,6 +1,9 @@
-const student = require("./student");
+const fs = require("fs");
 
-console.log(student.getName());
-console.log(student.getClass());
-console.log(student.getAge());
-console.log(student.getSchool());
+fs.rename("Demo1.txt", "Demo2.txt", (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Successful");
+  }
+});
