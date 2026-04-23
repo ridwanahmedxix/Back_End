@@ -13,3 +13,10 @@ const getSchool = () => {
 const getClass = () => {
   return "Class 9";
 };
+
+module.exports = {
+  getName,
+  getAge,
+  getSchool,
+  getClass,
+};
